@@ -1,0 +1,164 @@
+.order
+{
+    background-image: url(img/form-bg.jpg);
+    background-size: cover;
+}
+
+.section-title--order
+{
+    text-align: center;
+    color: #f9b43b;
+    line-height: 4.5rem;
+}
+
+.order__wrapper
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button--clear
+{
+    background-color: transparent;
+}
+
+.form
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__row
+{
+    display: flex;
+    margin-bottom: rem(20px);
+}
+
+.form__row:last-child
+{
+    margin-bottom: 0;
+}
+
+.form__block-input
+{
+    border-radius: rem(5px);
+    border: none;
+    background-color: white;
+    width: 100%;
+}
+
+.form__block
+{
+    margin-right: rem(20px);
+    flex: 1;
+}
+
+.form__block:last-child
+{
+    margin-right: 0;
+}
+
+.form
+{
+    display: flex;
+    justify-content: space-around;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+.form__col
+{
+    margin-right: rem(20px);
+    flex: 1;
+
+    @include tablets{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: rem(20px);
+    }
+
+}
+
+.form__col:last-child
+{
+    margin-right: 0;
+
+    @include tablets{
+        margin-bottom: 0;
+    }
+
+}
+
+.form__radio
+{
+    display: none;
+}
+
+.form__radio-fake
+{
+	display: inline-block;
+	width: rem(20px);
+	height: rem(20px);
+	border: rem(1px) solid gray;
+	border-radius: 50%;
+	position: relative;
+	vertical-align: middle;
+	margin-right: rem(5px);
+	transition: border;
+	cursor: pointer;
+}
+
+.form__radio-fake:after
+{
+content: '';
+width: 0;
+height: 0;
+border-radius: 50%;
+background-color: orange;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.form__radio:checked + .form__radio-fake
+{
+	border: rem(1px) solid orange;
+}
+
+.form__radio:checked + .form__radio-fake:after
+{
+	width: rem(8px);
+	height: rem(8px);
+}
+
+.form__block-textarea
+{
+    resize: none;
+    height: rem(100px);
+    width: 100%;
+}
+
+.form__block--flex
+{
+    display: flex;
+
+    @include phones {
+    justify-content: center;
+    }
+
+}
+
+.form__block-input {
+    outline: none;
+    padding: rem(7px);
+}

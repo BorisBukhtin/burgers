@@ -1,0 +1,123 @@
+.full-menu
+{
+    background-color: #2C2F31;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    display: none;
+
+    @include tablets {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+.full-menu__link
+{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: rem(20px);
+    height: rem(20px);
+}
+
+.full-menu__item
+{
+    width: 100%;
+    height: rem(5px);
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    border-radius: rem(10px);
+}
+
+.full-menu__item:nth-child(1)
+{
+    
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.full-menu__item:nth-child(2)
+{
+    
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.full-menu__header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: rem(30px);
+}
+
+.full-menu__wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.menu__item-mobile
+{
+    text-align: center;
+}
+
+.full-menu__wrapper > .menu > .menu__list
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-menu__wrapper > .menu > .menu__list > .menu__item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    justify-content: center;
+}
+
+.full-menu__wrapper > .menu > .menu__list > .menu__item::after{
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.full-menu__wrapper > .menu
+{
+    @include tablets {
+        display: flex;
+    }
+}
+
+.full-menu__wrapper > .menu > .menu__list > .menu__item > .menu__link
+{
+    font-size: rem(30px);
+}
+
+.full-menu--active
+{
+    opacity: 1;
+    visibility: visible;
+}

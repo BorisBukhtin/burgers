@@ -1,0 +1,144 @@
+.section-menu
+{
+    background-image: url(img/menu-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-menu__wrapper
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.section-menu-accordeon
+{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70%;
+
+    @include tablets{
+        width: 50%;
+    }
+
+}
+
+.accordeon-two__header
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordeon-two__link{
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.375rem;
+    position: relative;
+}
+
+.accordeon-two__link::before{
+    content: '';
+    position: absolute;
+    background-color: #0000008a;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.accordeon-two__link--meat
+{
+    background-image: url(img/formeat.jpg);
+}
+
+.accordeon-two__link--vegan
+{
+    background-image: url(img/forvegan.jpg);
+}
+
+.accordeon-two__link--diet
+{
+    background-image: url(img/fordiet.jpg);
+}
+
+.accordeon-two__title
+{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Gagalin-Regular';
+    font-size: rem(40px);
+    display: inline-block;
+}
+
+.accordeon-two__item
+{
+    display: flex;
+    height: 100%;
+}
+
+.accordeon-two__item--active
+{
+    width: 100%;
+    height: 100%;
+}
+
+.accordeon-two__item-text
+{   background-color: #2C2F31;
+    overflow: hidden;
+    width: 0;
+    opacity: 0;
+    transition: .4s;
+}
+
+.accordeon-two__item-text
+{  
+    opacity: 0;
+}
+
+.accordeon-two__list
+{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.section-title--menu
+{
+    position: absolute;
+    left: 10%;
+}
+
+
+.accordeon-two__item--active .accordeon-two__item-text{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.accordeon-two__item--active .accordeon-two__link--meat{
+    color: #f9b43b;
+}
+
+.accordeon-two__item--active .accordeon-two__link--vegan{
+    color: #f9b43b;
+}
+
+.accordeon-two__item--active .accordeon-two__link--diet{
+    color: #f9b43b;
+}
+
+.accordeon-two__item--active .accordeon-two__item-text{
+    opacity: 1;
+}

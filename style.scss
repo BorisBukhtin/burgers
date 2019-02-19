@@ -1,0 +1,33 @@
+@function rem($px) {
+    @return $px / 16px+0rem;
+   }                
+
+//bracepoints
+$Tablets: 768px;
+$Phones: 480px;
+
+@mixin tablets {
+    @media screen and (max-width: $Tablets) {
+        @content;
+    }
+}
+
+
+@mixin phones {
+    @media screen and (max-width: $Phones) {
+        @content;
+    }
+}
+
+
+@import "fonts.scss";
+@import "others.scss";
+@import "hero.scss";
+@import "best.scss";
+@import "main-menu.scss";
+@import "reviews.scss";
+@import "team.scss";
+@import "section-menu.scss";
+@import "order.scss";
+@import "contacts.scss";
+@import "menu-mobile.scss";
